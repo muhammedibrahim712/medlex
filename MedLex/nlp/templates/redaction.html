@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<!-- begin::Head -->
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			MedLex
+			{% load static %}
+		</title>
+		<meta name="description" content="Latest updates and statistic charts">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!--begin::Web font -->
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+		<script>
+          WebFont.load({
+            google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
+            active: function() {
+                sessionStorage.fonts = true;
+            }
+          });
+		</script>
+		<!--end::Web font -->
+        <!--begin::Base Styles -->  
+		<link href="{% static 'assets/vendors/base/vendors.bundle.css' %}" rel="stylesheet" type="text/css" />
+		<link href="{% static 'assets/demo/default/base/style.bundle.css' %}" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/redaction.plugin.css' %}">
+        <link href="{% static 'css/custom.css' %}" rel="stylesheet" type="text/css" />
+		<!--end::Base Styles -->
+		<link rel="shortcut icon" href="{% static 'assets/demo/default/media/img/logo/favicon.ico' %}" />
+		<style>
+			.m-footer--push.m-aside-left--enabled:not(.m-footer--fixed) .m-footer {
+				margin-left: 0;
+			}
+
+			#div_controlPanel .row {
+				margin: 0;
+			}
+		</style>
+	</head>
+	<!-- end::Head -->
+    <!-- end::Body -->
+	<body class="m-page--fluid m--skin- m-content--skin-light2   m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default"  >
+		<!-- begin:: Page -->
+		<div class="m-grid m-grid--hor m-grid--root m-page">
+			<!-- BEGIN: Header -->
+			<header class="m-grid__item    m-header "  data-minimize-offset="200" data-minimize-mobile-offset="200" >
+				<div class="m-container m-container--fluid m-container--full-height">
+					<div class="m-stack m-stack--ver m-stack--desktop">
+						<!-- BEGIN: Brand -->
+						<div class="m-stack__item m-brand  m-brand--skin-dark ">
+							<div class="m-stack m-stack--ver m-stack--general">
+								<div class="m-stack__item m-stack__item--middle m-brand__logo">
+									<a href="#" class="m-brand__logo-wrapper">
+										<img alt="" src="{% static 'assets/demo/default/media/img/logo/logo_default_dark.png' %}"/>
+									</a>
+								</div>
+								<div id="m_toggle_left_side" class="m-stack__item m-stack__item--middle m-brand__tools">
+									<!-- BEGIN: Left Aside Minimize Toggle -->
+									<a href="javascript:;" id="m_aside_left_minimize_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-desktop-inline-block 
+					 ">
+										<span></span>
+									</a>
+									<!-- END -->
+							<!-- BEGIN: Responsive Aside Left Menu Toggler -->
+									<a href="javascript:;" id="m_aside_left_offcanvas_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-tablet-and-mobile-inline-block">
+										<span></span>
+									</a>
+									<!-- END -->
+							<!-- BEGIN: Responsive Header Menu Toggler -->
+									
+									<!-- END -->
+								<!-- BEGIN: Topbar Toggler -->
+									<!-- BEGIN: Topbar Toggler -->
+								</div>
+							</div>
+						</div>
+						<!-- END: Brand -->
+						<div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav" style="padding-top: 5px; background-color: #c5c5c5">
+							<!-- BEGIN: Horizontal Menu -->
+							<button class="m-aside-header-menu-mobile-close  m-aside-header-menu-mobile-close--skin-dark " id="m_aside_header_menu_mobile_close_btn">
+								<i class="la la-close"></i>
+							</button>
+							<div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-dark m-aside-header-menu-mobile--submenu-skin-dark "  >
+								
+							</div>
+							<div>
+								<span style="font-size: 40px; font-family: Roboto; font-weight: 500; padding:8px 0 0 60px;">PII Removal - DarryI B.Evenson - Case Name1 - Settings</span>
+							</div>
+							<!-- END: Horizontal Menu -->
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- END: Header -->		
+		<!-- begin::Body -->
+			<div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
+				<!-- BEGIN: Left Aside -->
+				<button class="m-aside-left-close  m-aside-left-close--skin-dark " id="m_aside_left_close_btn">
+					<i class="la la-close"></i>
+				</button>
+				<div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-dark m--hide">
+					<!-- BEGIN: Aside Menu -->
+					<div id="m_ver_menu" class="m-aside-menu  m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark " data-menu-vertical="true" data-menu-scrollable="false" data-menu-dropdown-timeout="500">
+						<div id='m_avatar' style="display: inline-grid">
+							<img src="{% static 'image/user_blue.png' %}" class="avatar" alt="Avatar">
+							<span class="avatar-name">Emma Hill</span>
+						</div>
+						<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
+							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+								<a  href="#" class="m-menu__link m-menu__toggle">
+									<i class="m-menu__link-icon fa fa-user"></i>
+									<span class="m-menu__link-text">
+										My Account
+									</span>									
+								</a>								
+							</li>							
+							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+								<a  href="#" class="m-menu__link m-menu__toggle">
+									<i class="m-menu__link-icon fa fa-users"></i>
+									<span class="m-menu__link-text">
+										Clients
+									</span>
+									<i class="m-menu__ver-arrow la la-angle-right"></i>
+								</a>
+								<div class="m-menu__submenu ">
+									<span class="m-menu__arrow"></span>
+									<ul class="m-menu__subnav">
+										<li class="m-menu__item  m-menu__item--parent" aria-haspopup="true" >
+											<span class="m-menu__link">
+												<span class="m-menu__link-text">
+													Clients
+												</span>
+											</span>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="#" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Client Information
+												</span>
+											</a>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="#" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Case Information
+												</span>
+											</a>
+										</li>										
+									</ul>
+								</div>
+							</li>
+							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+								<a  href="#" class="m-menu__link m-menu__toggle">
+									<i class="m-menu__link-icon fa fa-file"></i>
+									<span class="m-menu__link-text">
+										Document Services
+									</span>
+									<i class="m-menu__ver-arrow la la-angle-right"></i>
+								</a>
+								<div class="m-menu__submenu ">
+									<span class="m-menu__arrow"></span>
+									<ul class="m-menu__subnav">
+										<li class="m-menu__item  m-menu__item--parent" aria-haspopup="true" >
+											<span class="m-menu__link">
+												<span class="m-menu__link-text">
+													Document Services
+												</span>
+											</span>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="#" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Document Request and Track
+												</span>
+											</a>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="#" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Decouple Document
+												</span>
+											</a>
+										</li>										
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="#" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Duplicate X
+												</span>
+											</a>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="#" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Redact PII
+												</span>
+											</a>
+										</li>							
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="#" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Bill and Lien Reconcilliation
+												</span>
+											</a>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="#" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													AI Tools
+												</span>
+											</a>
+										</li>																	
+									</ul>
+								</div>
+							</li>
+							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+								<a  href="#" class="m-menu__link m-menu__toggle">
+									<i class="m-menu__link-icon fa fa-question-circle"></i>
+									<span class="m-menu__link-text">
+										Help
+									</span>									
+								</a>								
+							</li>
+							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+								<a  href="#" class="m-menu__link m-menu__toggle">
+									<i class="m-menu__link-icon fa fa-sign-out"></i>
+									<span class="m-menu__link-text">
+										Log Out
+									</span>									
+								</a>								
+							</li>														
+						</ul>
+					</div>
+					<!-- END: Aside Menu -->
+				</div>
+				<!-- END: Left Aside -->
+				<div class="m-grid__item m-grid__item--fluid m-wrapper">
+					<div class="m-content" style="display:inline-grid; width:100%; height: 100%; font-family: Roboto; font-size: 16px; font-weight: 400;">
+						<div style="height: 100%;">
+							<span style="margin:10px 30px 0 30px; font-weight: bold; font-size: 20px;">Redaction</span>
+							<div class = 'row' style="margin: 5px 20px; padding: 0 0 25px 0; border-top: 1px solid gray; height: 100%;">
+								<div class = 'col-md-1 col-sm-3 col-xs-3' style = 'margin: 15px 0 0; height: 500px; border: 1px solid gray; padding: 1px; overflow: auto;'>
+                                    <div class = 'div_pageViewPanel' page = '0'>
+                                        <div class = 'div_pageViewDescription'>
+                                            <div class = 'row' style="margin:0;">
+                                                <div class = 'col-md-3'>1</div>
+                                                <div class = 'col-md-9 pageCheckState'>Under Review</div>
+                                            </div>
+                                        </div>
+                                    </div>
+								</div>
+								<div class = 'col-md-6 col-sm-9 col-xs-9' >
+									<div class = 'row m--margin-right-15 m--margin-left-15 m--padding-top-15' style="height: 100%;  ">
+										<div class = 'col-md-12' style="border: 1px solid #000; box-shadow: 3px 4px 5px -1px grey; padding: 20px;">
+											<p id = 'p_pageContent'>
+										    <!-- Vasiliy is an architect, multi-platform developer, <span class = 'detected-1'>hobbyist UI designer</span>, and entrepreneur. He's an all-in-one performer and perfectionist in a great way. With more than sixteen years of experience in web programming and managing development teams, he's excited about the way the web is evolving and likes to be on the bleeding edge of modern technology. -->
+										  	</p>
+									  	</div>
+								  	</div>
+								</div>
+								<div class = 'col-md-5' id = 'div_controlPanel'>
+									<div class = 'row m--margin-top-15'>
+										<div class = 'col-md-5 col-sm-3 col-xs-3' align = 'center' style = 'color: white; background: #4c4c4c; padding: 5px; font-size: 17px;'>
+											<span id="span_pageNavInfo">Page 1 from 3</span>
+										</div>
+										<div class = 'col-md-7 col-sm-9 col-xs-9'>
+											<div class="m-input-icon m-input-icon--right">
+												<input type="text" class="form-control m-input" placeholder="Search">
+												<span class="m-input-icon__icon m-input-icon__icon--right">
+													<span>
+														<i class="la la-search"></i>
+													</span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class = 'row m--margin-top-20 m--padding-10'>
+										<div class = 'col-md-12'>
+											<button type="button" class="btn m-btn--pill btn-success show" style="font-size: 13px; padding: 14px 30px;" id = 'btn_showreport'>
+												SHOW REPORT
+											</button>
+										</div>
+									</div>
+
+                                    <div class = 'row m--margin-top-15 m--padding-5 m--hide' id = 'div_report' style=" max-height: 300px; overflow: auto;">
+                                        <table style="width: 100%;">
+                                            <tr class = 'table-header' align = 'center'>
+                                                <td class = 'table-header-tr'>Page</td>
+                                                <td class = 'table-header-tr'>Item</td>
+                                                <td class = 'table-header-tr'>Tag</td>
+                                            </tr>
+                                            <tr class = 'tr-last'></tr>
+                                        </table>
+                                    </div>
+
+
+									<div class = 'row m--margin-top-15 m--padding-5 none-report'>
+										<div class = 'col-md-6 m--padding-top-5' align = 'left' id='div_redactionRemainCount'>
+											7 redactions envisaged
+										</div>
+										<div class = 'col-md-6' align = 'right'>
+											<button type="button" class="btn m-btn--pill btn-success" id = 'btn_acceptAllRedaction'
+												style="font-size: 13px; padding: 15px 15px; width: 175px;">
+												Accept All Redactions
+											</button>
+										</div>
+									</div>
+
+									<div class = 'row m--margin-top-5 m--padding-5 m--hide' style="border-top: 1px solid gray">
+										<div class = 'col-md-6 m--padding-top-5' align = 'left'>
+											Add additional areas
+										</div>
+										<div class = 'col-md-6' align = 'right'>
+											<button type="button" class="btn m-btn--pill btn-success" style="font-size: 13px; padding: 15px 15px; width: 175px;">
+												Add Redactions
+											</button>
+										</div>
+									</div>
+									<div class = 'row m--padding-5  none-report'  style="border-top: 1px solid gray">
+										<div class = 'col-md-6 m--padding-top-5' align = 'left' >
+											Redact certain text/numbers
+										</div>
+										<div class = 'col-md-6' align = 'right'>
+											<button type="button" class="btn m-btn--pill btn-success" id = 'btn_addCustomRedaction'
+												style="font-size: 13px; padding: 15px 15px;  width: 175px;">
+												Add Custom Selection
+											</button>
+										</div>
+									</div>
+									<div class = 'row m--padding-5 m--hide' id = 'div_addCustomRedaction'>
+										<div class = 'col-md-4'>
+											<input type="text" class="form-control m-input" id="input_customRedaction" placeholder="Text or Number">
+										</div>
+										<div class = 'col-md-4'>
+											<select class="form-control m-input" id="select_redaction">
+												<option value = '0'>Name</option>
+											</select>
+										</div>
+										<div class = 'col-md-4' align = 'right'>
+											<button type="button" class="btn m-btn--pill btn-success" id = 'btn_confirmCustomRedaction'
+												style="font-size: 13px; padding: 15px 15px;  width: 175px;">
+												Add
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>									
+					</div>
+				</div>				
+			</div>
+			<!-- end:: Body -->
+			<!-- begin::Footer -->
+			<footer class="m-grid__item		m-footer ">
+				<div class="m-container m-container--fluid m-container--full-height m-page__container">
+					<div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
+						<div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
+							<span class="m-footer__copyright">
+								2018 &copy; AI MedLex by MedLex Team								
+							</span>
+						</div>
+						<div class="m-stack__item m-stack__item--right m-stack__item--middle m-stack__item--first">
+							<ul class="m-footer__nav m-nav m-nav--inline m--pull-right">
+								<li class="m-nav__item">
+									<a href="#" class="m-nav__link">
+										<span class="m-nav__link-text">
+											About
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- end::Footer -->
+		</div>
+		<!-- end:: Page -->
+	    <!-- begin::Scroll Top -->
+		<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500" data-scroll-speed="300">
+			<i class="la la-arrow-up"></i>
+		</div>
+		<!-- end::Scroll Top -->	
+		<!-- begin::Drop Down Menu -->
+		<div class = 'drop-down-menu m--hide'>
+		    <div class = 'item item-tagComboBox'>
+		      <span>Names</span>
+		      <i class="la la-angle-down"></i>
+		      <span>
+		    </div>
+		    <div class = 'item item-tagComboBox-append-box m--hide'>
+		      <div class = 'item item-tagComboBox-append-list'>
+		        <!-- <div class = 'item item-tagComboBox-append-list-option'>Name</div> -->
+		      </div>
+		      <div class = 'item item-tagComboBox-append createNew-button'>
+		        <button type="button" class="btn btn-primary btn-sm">
+		          + Create New Tag
+		        </button>
+		      </div>
+		      <div class = 'item item-tagComboBox-append createNew-detail m--hide'>
+		        <input type="text" class="form-control m-input" id="input_newTagName" placeholder="New Tag" style="float:left; width: 140px; ">
+		        <a href="#" class="btn btn-info m-btn m-btn--icon btn-sm m-btn--icon-only m-btn--custom m-btn--pill m--margin-top-5 m--margin-left-5"
+		         id = 'btn_cancelCreateTag' style="float: right;">
+		          <i class="la la-close"></i>
+		        </a>
+		        <a href="#" class="btn btn-info m-btn m-btn--icon btn-sm m-btn--icon-only m-btn--custom m-btn--pill m--margin-top-5" 
+		         id = 'btn_confirmCreateTag' style="float: right;">
+		          <i class="la la-check"></i>
+		        </a>
+		      </div>
+		    </div>
+		    <div style="clear:both"></div>
+		    <div class = 'item item-accept not-append-box' id = 'div_acceptButton'>Accept</div>
+		    <div class = 'item item-acceptAll not-append-box' id = 'div_acceptAllButton'>Accept all at the page</div>
+		    <div class = 'item item-edit not-append-box' id = 'div_editButton'>Edit</div>
+		    <div class = 'item item-remove not-append-box' id = 'div_removeButton'>Remove</div>
+	 	</div>
+	 	<!-- end::Drop Down Menu -->
+	 	<!-- begin::Edit Modal Diaglog -->
+	 	<div class="modal fade" id="modal_edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <h5 class="modal-title" id="exampleModalLongTitle">
+		            Edit Redaction
+		          </h5>
+		          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		            <span aria-hidden="true">
+		              &times;
+		            </span>
+		          </button>
+		        </div>
+		        <!-- <div class = 'row'>
+		        	<div class = 'col-md-6'>
+						<select class="form-control m-input" id="exampleSelect1">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+					</div>
+		        </div> -->
+		        <div class="modal-body">
+		          	<p id = 'p_editContent'></p>
+		        </div>
+		        <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal" id = 'button_closeModal'>
+		            	Cancel
+					</button>
+					<button type="button" class="btn btn-primary" id = 'button_saveChange'>
+						Save changes
+					</button>  
+		        </div>
+		      </div>
+		    </div>
+	  	</div>
+	 	<!-- end::Edit Modal Dialog -->
+
+    	<!--begin::Base Scripts -->
+		<script src="{% static 'assets/vendors/base/vendors.bundle.js' %}" type="text/javascript"></script>
+		<script src="{% static 'assets/demo/default/base/scripts.bundle.js' %}" type="text/javascript"></script>
+		<script src="{% static 'js/redaction.plugin.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/common.js' %}" type="text/javascript"></script>
+		<script type="text/javascript">
+            var tagList = [{% for tag in tag_list %}
+                                "{{ tag }}" ,
+                            {% endfor %}];
+
+            var sentenceList = [
+                "Vasiliy is an architect, mvulti-platform developer, hobbyist UI designer, and entrepreneur. He\'s an all-in-one performer and perfectionist in a great way. With more than sixteen years of experience in web programming and managing development teams, he\'s excited about the way the web is evolving and likes to be on the bleeding edge of modern technology."
+            ];
+            var formattedSentenceList = [];
+            var redactionList = [];
+            var redactionSentenceMap = {};
+            var page_count = {{ page_count }};
+            var page = 0;
+            var didFirstLoad = false;
+            var redactionRemainCount = 0;
+
+            /*
+            var redactionList = [{
+                str: "UI designer",
+                tagId: 5
+            }];
+
+            var redactionSentenceMap = {
+                "0": [0]
+            };
+            */
+
+			$(function() {
+				$("#m_aside_left").hide();
+
+				$("#add_text_btn").click(function(){
+				    $(this).hide();
+				    $(this).next().show();
+				});
+				//RedactionPlugin.init();
+                getSentenceList();
+                createPagePanel();
+
+                $(document).on('click', '.div_pageViewPanel', function() {
+                    page = $(this).attr('page');
+                    getSentenceList();
+                });
+			});
+
+
+			var getSentenceList = function() {
+			    $.post('getSentenceList', {
+                    page: page
+                }, function(data) {
+			        sentenceList = data['sentence_list'];
+			        redactionSentenceMap = {};
+			        redactionList = [];
+                    getRedactionInfo();
+                    $("#span_pageNavInfo").text('Page ' + (parseInt(page)+1) + ' of ' + page_count);
+                });
+            }
+
+			var createPagePanel = function() {
+			    if(page_count <= 1)
+			        return;
+			    var pagePanelOrigin = $(".div_pageViewPanel");
+                for (var i = page_count; i >= 2; i--) {
+                    var pagePanelClone = pagePanelOrigin.clone();
+                    pagePanelClone.attr('page', i-1);
+                    pagePanelClone.find('.col-md-3').text(i);
+                    pagePanelOrigin.after(pagePanelClone);
+                    pagePanelClone.css('background-image', 'url(../../static/pdf_image/a-'+ (i-1) +'.png)');
+                }
+            }
+
+			var getRedactionInfo = function() {
+                $.post('getRedactionInfo', {
+                  page : page
+                }, function(data) {
+                    var tagArray = JSON.parse(data.tag_list_json);
+                    var redactionArray = JSON.parse(data.redaction_list_json);
+
+                    var tagMap = {};
+                    for(var i = 0; i < tagArray.length; i++) {
+                        tagMap[tagArray[i]['pk'] + ''] = i;
+                    }
+
+                    for(var i = 0; i < redactionArray.length; i++) {
+                        var tmpMap = {};
+                        tmpMap['str'] = redactionArray[i]['fields']['str'];
+                        tmpMap['id'] = redactionArray[i]['pk'];
+                        tmpMap['state'] = redactionArray[i]['fields']['state'];
+                        tmpMap['tagId'] = parseInt(tagMap[redactionArray[i]['fields']['tag']+'']);
+                        redactionList.push(JSON.parse(JSON.stringify(tmpMap)));
+                        redactionSentenceMap[i+''] = [0];
+                    }
+                    if(didFirstLoad == false) {
+                        RedactionPlugin.init();
+                        didFirstLoad = true;
+                    } else {
+                        DisplayPage.init();
+                    }
+                });
+            }
+
+            var checkRedactionRemain = function() {
+                var flag = true;
+                var cnt = 0;
+                for(var i = 0; i < redactionList.length; i++) {
+                    if(redactionList[i]['state'] == 0) {
+                        flag = false;
+                        break;
+                    }
+                    cnt++;
+                };
+                if(cnt != 0) {
+                    $("#div_redactionRemainCount").text(cnt + " items redacted");
+                } else {
+                    $("#div_redactionRemainCount").text(redactionList.length + " redactions envisaged");
+                }
+
+                if(flag == true) {
+                    $("div[page='"+page+"']").find('.pageCheckState').addClass('checked');
+                    $("div[page='"+page+"']").find('.pageCheckState').text('Confirmed');
+
+                }
+            };
+        </script>
+		<!--end::Base Scripts -->   
+	</body>
+	<!-- end::Body -->
+</html>

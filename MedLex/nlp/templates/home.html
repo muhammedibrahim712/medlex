@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<!-- begin::Head -->
+	<head>
+		<meta charset="utf-8" />
+		<title>
+			MedLex
+			{% load static %}
+		</title>
+		<meta name="description" content="Latest updates and statistic charts">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!--begin::Web font -->
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+		<script>
+          WebFont.load({
+            google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
+            active: function() {
+                sessionStorage.fonts = true;
+            }
+          });
+		</script>
+		<!--end::Web font -->
+        <!--begin::Base Styles -->  
+		<link href="{% static 'assets/vendors/base/vendors.bundle.css' %}" rel="stylesheet" type="text/css" />
+		<link href="{% static 'assets/demo/default/base/style.bundle.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/custom.css' %}" rel="stylesheet" type="text/css" />
+		<!--end::Base Styles -->
+		<link rel="shortcut icon" href="{% static 'assets/demo/default/media/img/logo/favicon.ico' %}" />
+	</head>
+	<!-- end::Head -->
+    <!-- end::Body -->
+	<body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default"  >
+		<!-- begin:: Page -->
+		<div class="m-grid m-grid--hor m-grid--root m-page">
+			<!-- BEGIN: Header -->
+			<header class="m-grid__item    m-header "  data-minimize-offset="200" data-minimize-mobile-offset="200" >
+				<div class="m-container m-container--fluid m-container--full-height">
+					<div class="m-stack m-stack--ver m-stack--desktop">
+						<!-- BEGIN: Brand -->
+						<div class="m-stack__item m-brand  m-brand--skin-dark ">
+							<div class="m-stack m-stack--ver m-stack--general">
+								<div class="m-stack__item m-stack__item--middle m-brand__logo">
+									<a href="#" class="m-brand__logo-wrapper">
+										<img alt="" src="{% static 'assets/demo/default/media/img/logo/logo_default_dark.png' %}"/>
+									</a>
+								</div>
+								<div id="m_toggle_left_side" class="m-stack__item m-stack__item--middle m-brand__tools">
+									<!-- BEGIN: Left Aside Minimize Toggle -->
+									<a href="javascript:;" id="m_aside_left_minimize_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-desktop-inline-block 
+					 ">
+										<span></span>
+									</a>
+									<!-- END -->
+							<!-- BEGIN: Responsive Aside Left Menu Toggler -->
+									<a href="javascript:;" id="m_aside_left_offcanvas_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-tablet-and-mobile-inline-block">
+										<span></span>
+									</a>
+									<!-- END -->
+							<!-- BEGIN: Responsive Header Menu Toggler -->
+									
+									<!-- END -->
+								<!-- BEGIN: Topbar Toggler -->
+									<!-- BEGIN: Topbar Toggler -->
+								</div>
+							</div>
+						</div>
+						<!-- END: Brand -->
+						<div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav" style="padding-top: 5px; background-color: #c5c5c5">
+							<!-- BEGIN: Horizontal Menu -->
+							<button class="m-aside-header-menu-mobile-close  m-aside-header-menu-mobile-close--skin-dark " id="m_aside_header_menu_mobile_close_btn">
+								<i class="la la-close"></i>
+							</button>
+							<div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-dark m-aside-header-menu-mobile--submenu-skin-dark "  >
+								
+							</div>
+							<div>
+								<span style="font-size: 40px; font-family: Roboto; font-weight: 500; padding:8px 0 0 60px;">PII Removal</span>
+							</div>
+							<!-- END: Horizontal Menu -->
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- END: Header -->		
+		<!-- begin::Body -->
+			<div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
+				<!-- BEGIN: Left Aside -->
+				<button class="m-aside-left-close  m-aside-left-close--skin-dark " id="m_aside_left_close_btn">
+					<i class="la la-close"></i>
+				</button>
+				<div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-dark ">
+					<!-- BEGIN: Aside Menu -->
+					<div id="m_ver_menu" class="m-aside-menu  m-aside-menu--skin-dark 		m-aside-menu--submenu-skin-dark " data-menu-vertical="true"		 	data-menu-scrollable="false" data-menu-dropdown-timeout="500">
+						<div id='m_avatar' style="display: inline-grid">
+							<img src="{% static 'image/user_blue.png' %}" class="avatar" alt="Avatar">
+							<span class="avatar-name">Emma Hill</span>
+						</div>
+						<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
+							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+								<a  href="#" class="m-menu__link m-menu__toggle">
+									<i class="m-menu__link-icon fa fa-user"></i>
+									<span class="m-menu__link-text">
+										My Account
+									</span>									
+								</a>								
+							</li>							
+							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+								<a  href="#" class="m-menu__link m-menu__toggle">
+									<i class="m-menu__link-icon fa fa-users"></i>
+									<span class="m-menu__link-text">
+										Clients
+									</span>
+									<i class="m-menu__ver-arrow la la-angle-right"></i>
+								</a>
+								<div class="m-menu__submenu ">
+									<span class="m-menu__arrow"></span>
+									<ul class="m-menu__subnav">
+										<li class="m-menu__item  m-menu__item--parent" aria-haspopup="true" >
+											<span class="m-menu__link">
+												<span class="m-menu__link-text">
+													Clients
+												</span>
+											</span>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="#" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Client Information
+												</span>
+											</a>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="#" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Case Information
+												</span>
+											</a>
+										</li>										
+									</ul>
+								</div>
+							</li>
+							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+								<a  href="#" class="m-menu__link m-menu__toggle">
+									<i class="m-menu__link-icon fa fa-file"></i>
+									<span class="m-menu__link-text">
+										Document Services
+									</span>
+									<i class="m-menu__ver-arrow la la-angle-right"></i>
+								</a>
+								<div class="m-menu__submenu ">
+									<span class="m-menu__arrow"></span>
+									<ul class="m-menu__subnav">
+										<li class="m-menu__item  m-menu__item--parent" aria-haspopup="true" >
+											<span class="m-menu__link">
+												<span class="m-menu__link-text">
+													Document Services
+												</span>
+											</span>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="#" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Document Request and Track
+												</span>
+											</a>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="#" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Decouple Document
+												</span>
+											</a>
+										</li>										
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="#" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Duplicate X
+												</span>
+											</a>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="#" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Redact PII
+												</span>
+											</a>
+										</li>							
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="#" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													Bill and Lien Reconcilliation
+												</span>
+											</a>
+										</li>
+										<li class="m-menu__item " aria-haspopup="true" >
+											<a  href="#" class="m-menu__link ">
+												<i class="m-menu__link-bullet m-menu__link-bullet--dot">
+													<span></span>
+												</i>
+												<span class="m-menu__link-text">
+													AI Tools
+												</span>
+											</a>
+										</li>																	
+									</ul>
+								</div>
+							</li>
+							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+								<a  href="#" class="m-menu__link m-menu__toggle">
+									<i class="m-menu__link-icon fa fa-question-circle"></i>
+									<span class="m-menu__link-text">
+										Help
+									</span>									
+								</a>								
+							</li>
+							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+								<a  href="#" class="m-menu__link m-menu__toggle">
+									<i class="m-menu__link-icon fa fa-sign-out"></i>
+									<span class="m-menu__link-text">
+										Log Out
+									</span>									
+								</a>								
+							</li>														
+						</ul>
+					</div>
+					<!-- END: Aside Menu -->
+				</div>
+				<!-- END: Left Aside -->
+				<div class="m-grid__item m-grid__item--fluid m-wrapper">
+					<div class="m-content" style="display:inline-grid; width:100%; font-family: Roboto; font-size: 16px; font-weight: 400;">
+						<div style="display: inline-grid;">
+							<span>16files uploaded</span>
+							<span>Please, choose files to proceed</span>
+							<div class="form-group m-form__group" style="display:content;">
+								<div class = 'row'>
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 input-group">
+										<input type="text" class="form-control" placeholder="Search for..." id = 'id_textSearchBox'>
+										<div class="input-group-append">
+											<button class="btn btn-secondary" type="button">
+												<i class="fa fa-search"></i>
+											</button>
+										</div>
+									</div>
+									<div class="float-right col-lg-6 col-md-6 col-sm-6 col-xs-12" align = 'right' style="padding-right:20px; display: none;" id = 'id_selectStateDiv'>
+										<span></span><span>document(s) selected</span>
+										<a href="javascript:" id = 'btn_proceed'
+                                           class="btn btn-outline-success m-btn m-btn--custom m-btn--icon m-btn--pill m-btn--air">
+											<span>
+												<i class="fa fa-arrow-right"></i>
+												<span>
+													Proceed
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>						
+						<div class="scrollbar" id="style-default" style="background-color: #8a8a8a; width: 100%; height: 450px;">
+							<div class="container">								
+								<div class="row">
+									{% for pdf in pdf_list %}
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+											<img src="{% static 'image/pdf3.png' %}"  alt="pdf document"	class="img-fluid" />
+											<label class="m-checkbox m-checkbox--solid" style="color: #e6e6e6;">
+												<input type="checkbox" class = 'classPDFCheckbox'>
+												{{pdf}}
+												<span style = "background: #e6e6e6;"></span>
+											</label>
+										</div>
+									{% endfor %}															
+								</div>
+							</div>
+					    	<div class="force-overflow"></div>
+					    </div>
+						<!-- <div style="padding:10px; background-color: green; width: 100%; height: 450px;">
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<!-- end:: Body -->
+<!-- begin::Footer -->
+			<footer class="m-grid__item		m-footer ">
+				<div class="m-container m-container--fluid m-container--full-height m-page__container">
+					<div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
+						<div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
+							<span class="m-footer__copyright">
+								2018 &copy; AI MedLex by MedLex Team								
+							</span>
+						</div>
+						<div class="m-stack__item m-stack__item--right m-stack__item--middle m-stack__item--first">
+							<ul class="m-footer__nav m-nav m-nav--inline m--pull-right">
+								<li class="m-nav__item">
+									<a href="#" class="m-nav__link">
+										<span class="m-nav__link-text">
+											About
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- end::Footer -->
+		</div>
+		<!-- end:: Page -->
+	    <!-- begin::Scroll Top -->
+		<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500" data-scroll-speed="300">
+			<i class="la la-arrow-up"></i>
+		</div>
+        <div id ='div_loader' class = 'm--valign-middle m--full-height m--block-center m--hide' style="width: 100%; position: absolute;">
+            <div class="m-loader m-loader--success" style="width: 210px; display: inline-block;">
+                <label>Please wait ...</label>
+            </div>
+        </div>
+		<!-- end::Scroll Top -->		    
+    	<!--begin::Base Scripts -->
+		<script src="{% static 'assets/vendors/base/vendors.bundle.js' %}" type="text/javascript"></script>
+		<script src="{% static 'assets/demo/default/base/scripts.bundle.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/common.js' %}" type="text/javascript"></script>
+		<!--end::Base Scripts -->   
+		<script type="text/javascript">
+		var pdfList = {};
+		var pdfSelectedCnt = 0;
+		var pdfSelectedFilterCnt = 0;
+		$(function() {
+			getCheckState();
+
+			$('.classPDFCheckbox').change(function() {
+				onChangePDFCheckbox(this);
+			});
+
+			$("#id_textSearchBox").keyup(function() {
+				pdfSelectedFilterCnt = 0;
+				var searchString = $(this).val();
+				$('.classPDFCheckbox').each(function(i, obj) {
+					var name = $(obj).parent().text().trim();
+					var checked = $(obj).prop("checked");
+					if(name.toLowerCase().includes(searchString.toLowerCase())) {
+						if(checked == true) {
+							pdfSelectedFilterCnt++;
+						}
+
+						$(obj).parent().parent().show();
+					} else {
+
+						$(obj).parent().parent().hide();
+					}	
+				});
+
+				if(pdfSelectedFilterCnt > 0) {
+					$("#id_selectStateDiv").children().first().text(pdfSelectedFilterCnt+ ' ');
+					$("#id_selectStateDiv").show();
+				} else {
+					$("#id_selectStateDiv").hide();
+				}
+				
+			});
+
+			$('#btn_proceed').click(function() {
+			    $("#div_loader").removeClass('m--hide');
+			    var pdfNameList = [];
+			    $.each(pdfList, function (pdfName, state) {
+			        if(state == true)
+			            pdfNameList.push(pdfName);
+                });
+
+			    $.post('savePdfList', {
+                    pdfNameString: JSON.stringify(pdfNameList)
+                    //tagString: tagNameList
+                }, function(data) {
+                    if(data.type == 'success') {
+                        var newUrl = $(location).attr('protocol') + '//' + $(location).attr('host')+'/medlex/settings';
+                        //alert(newUrl);
+                        window.location.replace(newUrl);
+                    }
+                });
+            })
+		});
+
+		function onChangePDFCheckbox(element) {
+			var name = $(element).parent().text().trim();
+			var checked = $(element).prop("checked");
+			pdfList[name] = checked;
+			if(checked == true) {
+				pdfSelectedCnt++;
+			} else {
+				pdfSelectedCnt--;
+			}
+
+			if(pdfSelectedCnt > 0) {
+				$("#id_selectStateDiv").children().first().text(pdfSelectedCnt + ' ');
+				$("#id_selectStateDiv").show();
+			} else {
+				$("#id_selectStateDiv").hide();
+			}
+		}
+
+		function getCheckState() {
+			$('.classPDFCheckbox').each(function(i, obj) {
+				var name = $(obj).parent().text().trim();
+				var checked = $(obj).prop("checked");
+				pdfList[name] = checked;
+				if(checked == true) {
+					pdfSelectedCnt++;
+				}
+			});
+		}
+		</script>
+	</body>
+	<!-- end::Body -->
+</html>

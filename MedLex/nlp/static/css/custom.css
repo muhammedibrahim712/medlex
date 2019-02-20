@@ -1,0 +1,75 @@
+#div_loader {
+    background: #00000094;
+    width: 100%;
+    position: absolute;
+    z-index: 9999;
+}
+
+#div_loader .m-loader {
+    margin-top: 20%;
+    margin-left: 50%;
+}
+
+#div_loader .m-loader:before {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-top-width: 4px;
+    border-right-width: 4px;
+}
+
+#div_loader label {
+    margin-top: 30px;
+    margin-left: -70px;
+    font-size: 23px;
+    font-weight: 500;
+    color: #34bfa3;
+}
+
+.div_pageViewPanel {
+    width:100%;
+    height: 140px;
+    border: 1px solid #676767;
+    margin-bottom:1px;
+    position: relative;
+    background-image: url(../../static/pdf_image/a-0.png);
+    background-size: cover;
+}
+
+.div_pageViewDescription {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 25px;
+    border-top: 1px solid #ababab;
+    background-color: white;
+}
+
+.div_pageViewDescription .row {
+    margin: 0;
+}
+
+.div_pageViewDescription .row .col-md-3 {
+    padding: 1px 0 0 5px;
+}
+
+.div_pageViewDescription .pageCheckState {
+    font-size: 11px;
+    text-align: right;
+    padding: 4px 5px 0 0;
+    color: #9e4900;
+    font-weight: 500;
+}
+
+.div_pageViewDescription .pageCheckState.checked {
+    color: #3445bf;
+}
+
+.table-header-tr {
+    border: 1px solid #f1f1f1;
+    background: #d8d8d8;
+}
+
+.tr-append td {
+    padding: 3px;
+    border: 1px solid #d8d8d8;
+}

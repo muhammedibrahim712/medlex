@@ -1,0 +1,84 @@
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+p {
+  line-height: 1.8;
+}
+
+span[class^="redaction-"] {
+  padding: 2px 5px;
+  text-decoration: none;
+  border-bottom: 2px solid #34bfa3;
+}
+
+span[class^="redaction-"]:hover {
+  background-color: #34bfa361;
+  cursor: pointer; 
+}
+
+span.redaction_accepted {
+  padding: 2px 5px;
+  text-decoration: none;
+  border-bottom: none;
+  background-color: #5856ff52;
+}
+
+.drop-down-menu {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #c5c5c5;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 1px #c5c5c5;
+  background: white;
+  position: absolute;
+}
+
+.drop-down-menu .item {
+  padding: 7px 5px 7px 5px;
+  border-bottom: 1px solid #efefef;
+  line-height: 1.5;
+}
+
+.item:last-child, .createNew-button {
+  border-bottom: none !important;
+}
+
+.item-tagComboBox {
+  font-weight: bold;
+}
+
+.item-tagComboBox i {
+  float: right;
+}
+
+.item-tagComboBox-append-list {
+  max-height : 151px;
+  overflow-y: auto;
+}
+
+.item.item-tagComboBox-append.createNew-detail {
+  height: 50px;
+}
+
+.item-tagComboBox-append.createNew-detail .m-btn--icon.m-btn--custom.m-btn--icon-only.btn-sm, .btn-group-sm > .m-btn--icon.m-btn--custom.m-btn--icon-only.btn {
+  width: 25px;
+  height: 25px;
+}
